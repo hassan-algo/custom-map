@@ -16,13 +16,16 @@ lon = 0.510947
 #USA
 lat = 37.090240
 lon = -95.712891
+#pak
+lat = 33.729388
+lon = 73.093146
 plt.figure()
 plt.imshow(img)
 newLog = (((lon+180)/(360))*(9639-361))+359.4
 newLat = (((-lat+90)/(180))*(4844-206))+206
-txt = "USA=>"+str(lon)+", "+str(lat)
+txt = "Pak=>"+str(lon)+", "+str(lat)
 plt.annotate(txt, xy=(newLog, newLat), xycoords='data',
-             xytext=(0.5, 0.5), textcoords='figure fraction',
+             xytext=(.3, 0.5), textcoords='figure fraction',
              arrowprops=dict(arrowstyle="->"))
 plt.scatter(newLog, newLat, s=5, c='red', marker='o')
 plt.show()
